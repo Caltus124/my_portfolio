@@ -1,0 +1,105 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #6e6e6e70;
+    border-radius: 5px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+input[type="text"]:focus{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    caret-color: white;
+    height: 20px;
+}
+input[type="text"]{
+    background-color: transparent;
+    border: transparent;
+    border-bottom-width: 3px;
+}
+body{
+    background-color: rgb(45 9 34 / 0.5);
+    font-family: 'Ubuntu';font-size: 15px;
+    font-weight: 700;
+    overflow-x: hidden;
+}
+.name_terminal{
+    color: #00FF00;
+}
+p{
+    color: white;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding-right: 5px;
+}
+label{
+    color: white;
+    margin-left: 5px;
+}
+.bleu_name{
+    color: #5C5CFF;
+}
+header{
+    height: 50px;
+    width: 100%;
+}
+
+.header2{
+    background-color: rgb(62 61 57 / 0.5); 
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+}
+.header2 a{
+    margin-top: -5px;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.header2 a:hover{
+    color: rgb(191, 191, 191);
+}
+a{
+    text-decoration: none;
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .popup button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .popup button.submit {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }

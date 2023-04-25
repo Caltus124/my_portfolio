@@ -1,0 +1,300 @@
+<html>
+<head>
+  <title>Enzo FONTANA</title>
+	<meta charset="utf-8">
+  <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-+i/6+x7JHq3zXSlgPpWIeGUHOJga/yz2Nn1dqVJyMIzLH7EBxJFq/9CpxpjrG5J5S5mSos5yBBcM+5QJvOH4VQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="#"><img src="{{ asset('images/terminal_ubuntu.png') }}" alt="terminal" width="90%"></a></li>
+      <li><a href="https://google.com/" target="_blank"><img src="{{ asset('images/firefox_logo.png') }}" alt="firefox" width="80%"></a></li>
+      <li><a href="#"><img src="{{ asset('images/files.png') }}" alt="files" width="90%"></a></li>
+      <li><a href="#" ><img src="{{ asset('images/libre_office.png') }}" alt="office" width="80%"></a></li>
+      <li><a href="https://tryhackme.com/p/Caltus124" target="_blank"><img src="{{ asset('images/tryhackme.png') }}" alt="tryhackme" width="90%"></a></li>
+      <li><a href="https://www.linkedin.com/in/enzo-fontana-epsi/" target="_blank"><img src="{{ asset('images/linkedin.png') }}" alt="linkedin" width="80%"></a></li>
+      <li><a href="" onclick="toggleFullScreen(); return false;"><img src="{{ asset('images/zoom.png') }}" alt="zoom" width="80%"></a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="window">
+<!-- Title bar start -->
+<div id="title-bar-width">
+	<div id="title-bar" class="outer yosemite">
+		<span class="dots">
+	     <div id="exit" class="dot red"></div>
+	     <div id="minimize" class="dot amber"></div>
+	     <div id="maximize" class="dot green"></div>
+	    </span>
+
+	     <span id="logo-description">user@enzofontana.fr</span>
+	</div>
+</div>
+
+
+<!-- Content start -->
+
+<iframe id="content" src="{{ path('app_terminal') }}" frameBorder="0"></iframe>
+
+
+
+
+</div>
+</body>
+
+<style>
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 6vw;
+  background-color: rgb(45 9 34 / 0.7);
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 1vw;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+    margin-top: 1vw;
+}
+
+a {
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  padding: 5px;
+  text-align: center;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('{{ asset('images/ubuntu.jpg') }}');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding:0;
+    margin:0;
+    
+}
+
+#logo {
+  padding-left: 5px;
+  vertical-align: middle;
+}
+
+#logo-description {
+  color: white;
+  font-size: 13px;
+  font-family: 'Ubuntu';font-size: 15px;
+  vertical-align: middle;
+  margin-right: 30px;
+  font-weight: bold;
+}
+
+#url-bar {
+  height: 28px;
+  background-color: rgb(62 61 57 / 0.5); 
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#url-bar::-webkit-scrollbar {
+  display: none;
+}
+
+#ssl-padlock {
+  user-select: none;
+  padding-left: 8px;
+  margin-right: 8px;
+}
+
+#domain-name {
+  color: black;
+  font-size: 14px;
+  font-family: "system";
+}
+
+#domain-path {
+  color: #878383;
+  font-size: 14px;
+  font-family: "system";
+}
+
+#title-bar-width {
+  width: calc(100% + 2px); /* 2px added to allow for border on iframe */
+}
+
+#title-bar {
+  user-select: none;
+  text-align: center;
+}
+
+#content {
+  width: calc(100% + 2px);
+  height: 500px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+#window {
+  color: red;
+  background-color: transparent;
+  border-radius: 7px 7px 7px 7px;
+  border-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 529px; /* title bar height + content height */
+  width: 40%;
+  margin-left: 150px;
+  margin-top: 50px;
+}
+
+.outer {
+  background: #b4b4b4;
+  opacity: 0.9;
+  padding: 5px 5px 5px 8px;
+  border-radius: 7px 7px 0px 0px;
+}
+.outer.dark {
+  background: #273138;
+}
+.outer.dark .dot {
+  background: #4a5c66;
+}
+.outer.yosemite {
+  background: #4f4d46;
+  border: 1px solid #4f4d46;
+  border-bottom: 1px solid #b4b4b4;
+}
+
+.dots {
+  float: left;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #f9f9f9;
+  border-radius: 50%;
+  margin: 0 4px 0 0;
+}
+.dot.red {
+  background: #ff6057;
+  border: 1px solid #e14640;
+}
+.dot.amber {
+  background: #ffbd2e;
+  border: 1px solid #dfa123;
+}
+.dot.green {
+  background: #27c93f;
+  border: 1px solid #1dad2b;
+}
+
+</style>
+<script>
+var titleBar = document.getElementById("title-bar");
+var exit = document.getElementById("exit");
+var max = document.getElementById("maximize");
+var min = document.getElementById("minimize");
+
+titleBar.addEventListener('mouseover', function handleMouseOver() {
+  titleBar.style.cursor = 'context-menu';
+});
+
+titleBar.addEventListener('mouseout', function handleMouseOver() {
+  titleBar.style.cursor = 'default';
+});
+
+//////////////// Make window draggable start ////////////////
+// Make the DIV element draggable:
+var draggable = $('#window');
+var title = $('#title-bar');
+
+title.on('mousedown', function(e){
+	var dr = $(draggable).addClass("drag");
+	height = dr.outerHeight();
+	width = dr.outerWidth();
+	ypos = dr.offset().top + height - e.pageY,
+	xpos = dr.offset().left + width - e.pageX;
+	$(document.body).on('mousemove', function(e){
+		var itop = e.pageY + ypos - height;
+		var ileft = e.pageX + xpos - width;
+		if(dr.hasClass("drag")){
+			dr.offset({top: itop,left: ileft});
+		}
+	}).on('mouseup', function(e){
+			dr.removeClass("drag");
+	});
+});
+//////////////// Make window draggable end ////////////////
+
+
+////////////////// Onclick listeners //////////////////
+// X button functionality
+$("#exit").click(function(){
+    $("#window").css("display", "none");
+  });
+
+// Maximize button functionality
+$("#maximize").click(enlarge);
+
+function enlarge(){
+  if(max.classList.contains("enlarged")){
+    $("#window").css("width", "40%");
+    $("#title-bar-width").css('width', '100%').css('width', '+=2px');
+    $("#content").css("width", "100%");
+    $("#maximize").removeClass("enlarged");
+  }
+  else{
+    $("#window").css("width", "70%");
+    $("#title-bar-width").css('width', '100%').css('width', '+=2px');
+    $("#content").css("width", "100%");
+    $("#maximize").addClass("enlarged");
+  }
+}
+
+
+function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+    }
+}
+
+
+</script>
+</html>
