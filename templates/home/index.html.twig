@@ -24,14 +24,22 @@
   </nav>
 </header>
 <div class="desktop_app">
+  <div class="desktop_app_col1">
     <a onclick="changeIframeSrc_cv(event)"><img src="{{ asset('images/pdf.png') }}" alt="office" width="70px"></a>
     <p>enzo_fontana_cv.pdf</p>
     <a onclick="changeIframeSrc_osint_avion(event)"><img src="{{ asset('images/pdf.png') }}" alt="office" width="70px"></a>
     <p>osint_avion.txt</p>
     <a onclick="changeIframeSrc_osint_tgv(event)"><img src="{{ asset('images/pdf.png') }}" alt="office" width="70px"></a>
     <p>osint_tgv.txt</p>
+  </div>
+  <div class="desktop_app_col2">
+    <a onclick="changeIframeSrc_cv(event)"><img src="{{ asset('images/file.png') }}" alt="office" width="70px"></a>
+    <p>soon.txt</p>
+    <a onclick="changeIframeSrc_osint_avion(event)"><img src="{{ asset('images/file.png') }}" alt="office" width="70px"></a>
+    <p>soon.txt</p>
     <a onclick="changeIframeSrc_osint_tgv(event)"><img src="{{ asset('images/file.png') }}" alt="office" width="70px"></a>
-    <p>bts.txt</p>
+    <p>soon.txt</p>
+  </div>
 </div>
 <div id="window">
 <!-- Title bar start -->
@@ -62,6 +70,8 @@
   position: absolute;
   margin-left: 7vw;
   margin-top: 3vw;
+  display: flex;
+  gap: 10px;
 }
 header {
   position: fixed;
@@ -191,8 +201,8 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   height: 529px; /* title bar height + content height */
   width: 40%;
-  margin-left: 20vw;
-  margin-top: 50px;
+  margin-left: 30vw;
+  margin-top: 5vw;
 }
 
 .outer {
