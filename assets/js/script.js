@@ -6,30 +6,20 @@ var count = 0;
 
 var name_cli = "<span class='name_terminal'>" + "user@enzofontana.com" + "</span>" + ":" + "<span class='bleu_name'>" + "~" + "</span>" + "$" +  "<br>"
 
-var commandes = "experience" + "<br>" + "tryhackme" + "<br>" + "about" + "<br>" + "post" + "<br>" + "osint" + "<br>" + "skills" + "<br>" + "contact" + "<br>" + "cv" + "<br>" +"ls" + "<br>" + "cat" + "<br>"; 
+var commandes = "experience" + "<br>" + "tryhackme" + "<br>" + "about" + "<br>" + "poste" + "<br>" + "osint" + "<br>" + "skills" + "<br>" + "contact" + "<br>" + "cv" + "<br>" +"ls" + "<br>" + "cat" + "<br>"; 
 
-var ls = "<span class='bleu_name'>" + "photos" + "</span>" +  "<br>" + "password.txt" + "<br>"; 
+var ls = "<span class='bleu_name'>" + "photos" + "</span>" +  "<br>" + "enzo_fontana_cv.pdf" +  "<br>" + "osint_avion.pdf" + "<br>" + "osint_tgv.pdf" + "<br>"; 
 
-var cv = "Cliquer sur le lien pour télécharger mon cv : " + "<a href='./pdf/fontana_enzo_cv.pdf' title='pdf'>" + "<span class='bleu_name'>" + "mon cv" + "</span>" + "</a>";
+var cv = "Cliquer sur le lien pour télécharger mon cv : " + "<a href='{{ asset('pdf/fontana_enzo_cv.pdf') }}' title='pdf'>" + "<span class='bleu_name'>" + "mon cv" + "</span>" + "</a>";
 
-var osint = "Ci-dessous mes writeup OSINT (Open Source Intelligence). L'OSINT, est tout simplement l'exploitation de sources d'information accessibles par tout le monde (journaux, sites web, conférences…) a des fins de renseignement." + "<br><br>"
-+ "* Write up photo de julien metayer : " 
-+ "<a href='./pdf/WRITE-UP OSINT.pdf' title='pdf'>" 
-+ "<span class='bleu_name'>" 
-+ "WRITE-UP" 
-+ "</span>" + "</a>" + "<br>"
-+ "* Write up photo vol avion : "
-+ "<a href='./pdf/WRITE-UP AVION.pdf' title='pdf'>" 
-+ "<span class='bleu_name'>" 
-+ "WRITE-UP" 
-+ "</span>" + "</a>";
+var osint = "L'OSINT, est tout simplement l'exploitation de sources d'information accessibles par tout le monde (journaux, sites web, conférences…) a des fins de renseignement.";
 
 var about = "👨‍💻 Hey moi c'est Enzo, je suis un jeune étudiant en informatique et je suis passionné de cyber sécurité. Plus tard je veux étre expert en cyber sécurité et travailler dans une blue team." 
 + "<br><br>" + "➡️ Je fais souvent des CTF et j'apprends de jour en jour la Cybersécurité." 
 + "<br>" + "➡️ J'aime faire de l'OSINT et de la GEOINT." 
 + "<br>" + "➡️ Je travaille principalement avec Debian (kali linux) de plus j'ai MacOS, Windows 10 et 11."
 
-var post_linkedin = "<iframe src='https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7051883699532898304' height='772' width='504' frameborder='0' allowfullscreen='' title='Post intégré'></iframe>"
+var poste_linkedin = "<iframe src='https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7051883699532898304' height='772' width='504' frameborder='0' allowfullscreen='' title='Post intégré'></iframe>"
 
 var contact = "<a href='https://linkedin.com/in/enzo-fontana-epsi'>LinkedIn</a>" 
 + "<br>" + "<a href='https://www.instagram.com/enzo_fta/?hl=fr'>Instagram</a>"
@@ -118,6 +108,8 @@ function cat(){
         img = "<img src='{{ asset('images/cat5.jpg') }}' height='300px'>";     
     }else if (rdm == 6){
         img = "<img src='{{ asset('images/cat6.jpeg') }}' height='300px'>";     
+    }else{
+        img = "<img src='{{ asset('images/cat6.jpeg') }}' height='300px'>";
     }
     
     
@@ -142,8 +134,8 @@ inputField.addEventListener("keypress", function(event) {
             result.innerHTML = name_cli + osint + "<br><br>";
         } else if (inputValue === "cv") {
             result.innerHTML = name_cli + cv + "<br><br>";
-        }else if (inputValue === "post") {
-            result.innerHTML = name_cli + post_linkedin + "<br><br>";
+        }else if (inputValue === "poste") {
+            result.innerHTML = name_cli + poste_linkedin + "<br><br>";
         }else if (inputValue === "contact") {
             result.innerHTML = name_cli + contact + "<br><br>";
         }else if (inputValue === "about") {
@@ -189,7 +181,7 @@ var popup = document.createElement("div");
 popup.classList.add("popup");
 
 // Ajout de boutons de couleur à la popup
-var colors = ["#00FFEC20", "#f1c40f20", "#e74c3c20", "#3498db20", "#8e44ad20", "#2ecc7120", "#3e3d3920"];
+var colors = ["#00FFEC70", "#f1c40f70", "#e74c3c70", "#3498db70", "#8e44ad70", "#2ecc7170", "#3e3d3970"];
 for (var i = 0; i < colors.length; i++) {
     var colorButton = document.createElement("button");
     colorButton.style.backgroundColor = colors[i];
@@ -212,3 +204,4 @@ popup.appendChild(closeButton);
 // Ajout de la popup à la page
 document.body.appendChild(popup);
 });
+

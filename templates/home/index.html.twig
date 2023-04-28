@@ -13,19 +13,29 @@
 <header>
   <nav>
     <ul>
-      <li><a href="#"><img src="{{ asset('images/terminal_ubuntu.png') }}" alt="terminal" width="90%"></a></li>
-      <li><a href="https://google.com/" target="_blank"><img src="{{ asset('images/firefox_logo.png') }}" alt="firefox" width="80%"></a></li>
-      <li><a href="#"><img src="{{ asset('images/files.png') }}" alt="files" width="90%"></a></li>
-      <li><a href="#" ><img src="{{ asset('images/libre_office.png') }}" alt="office" width="80%"></a></li>
-      <li><a href="https://tryhackme.com/p/Caltus124" target="_blank"><img src="{{ asset('images/tryhackme.png') }}" alt="tryhackme" width="90%"></a></li>
+      <li><a onclick="changeIframeSrc_terminal(event)"><img src="{{ asset('images/terminal_ubuntu.png') }}" alt="terminal" width="90%"></a></li>
+      <li><a onclick="changeIframeSrc_bing(event)"><img src="{{ asset('images/firefox_logo.png') }}" alt="firefox" width="80%"></a></li>
+      <li><a onclick="changeIframeSrc_netfliz(event)"><img src="{{ asset('images/netfliz.png') }}" alt="files" width="90%"></a></li>
+      <li><a onclick="changeIframeSrc_word(event)"><img src="{{ asset('images/libre_office.png') }}" alt="office" width="80%"></a></li>
+      <li><a onclick="changeIframeSrc_tryhackme(event)"><img src="{{ asset('images/tryhackme.png') }}" alt="tryhackme" width="90%"></a></li>
       <li><a href="https://www.linkedin.com/in/enzo-fontana-epsi/" target="_blank"><img src="{{ asset('images/linkedin.png') }}" alt="linkedin" width="80%"></a></li>
-      <li><a href="" onclick="toggleFullScreen(); return false;"><img src="{{ asset('images/zoom.png') }}" alt="zoom" width="80%"></a></li>
+      <li><a onclick="toggleFullScreen(); return false;"><img src="{{ asset('images/zoom.png') }}" alt="zoom" width="80%"></a></li>
     </ul>
   </nav>
 </header>
-
+<div class="desktop_app">
+    <a onclick="changeIframeSrc_cv(event)"><img src="{{ asset('images/pdf.png') }}" alt="office" width="70px"></a>
+    <p>enzo_fontana_cv.pdf</p>
+    <a onclick="changeIframeSrc_osint_avion(event)"><img src="{{ asset('images/pdf.png') }}" alt="office" width="70px"></a>
+    <p>osint_avion.txt</p>
+    <a onclick="changeIframeSrc_osint_tgv(event)"><img src="{{ asset('images/pdf.png') }}" alt="office" width="70px"></a>
+    <p>osint_tgv.txt</p>
+    <a onclick="changeIframeSrc_osint_tgv(event)"><img src="{{ asset('images/file.png') }}" alt="office" width="70px"></a>
+    <p>bts.txt</p>
+</div>
 <div id="window">
 <!-- Title bar start -->
+
 <div id="title-bar-width">
 	<div id="title-bar" class="outer yosemite">
 		<span class="dots">
@@ -38,18 +48,21 @@
 	</div>
 </div>
 
-
-<!-- Content start -->
-
 <iframe id="content" src="{{ path('app_terminal') }}" frameBorder="0"></iframe>
-
-
-
 
 </div>
 </body>
 
 <style>
+.desktop_app p{
+  text-align: center;
+  color: white;
+}
+.desktop_app{
+  position: absolute;
+  margin-left: 7vw;
+  margin-top: 3vw;
+}
 header {
   position: fixed;
   top: 0;
@@ -90,6 +103,7 @@ a {
 
 html,
 body {
+    position: relative;
     width: 100%;
     height: 100%;
     background-image: url('{{ asset('images/ubuntu.jpg') }}');
@@ -99,7 +113,8 @@ body {
     overflow: hidden;
     padding:0;
     margin:0;
-    
+    font-family: 'Ubuntu';font-size: 15px;
+    font-weight: 700;
 }
 
 #logo {
@@ -176,7 +191,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   height: 529px; /* title bar height + content height */
   width: 40%;
-  margin-left: 150px;
+  margin-left: 20vw;
   margin-top: 50px;
 }
 
@@ -271,6 +286,7 @@ $("#exit").click(function(){
 // Maximize button functionality
 $("#maximize").click(enlarge);
 
+
 function enlarge(){
   if(max.classList.contains("enlarged")){
     $("#window").css("width", "40%");
@@ -294,6 +310,68 @@ function toggleFullScreen() {
         document.exitFullscreen();
     }
 }
+
+function changeIframeSrc_word(event) {
+  event.preventDefault(); // empêche le comportement par défaut de la balise a
+  $("#window").css("display", "block");
+  var iframe = document.getElementById('content');
+  iframe.src = "{{ path('app_word') }}";
+}
+
+function changeIframeSrc_terminal(event) {
+  event.preventDefault(); // empêche le comportement par défaut de la balise a
+    $("#window").css("display", "block");
+  var iframe = document.getElementById('content');
+  iframe.src = "{{ path('app_terminal') }}";
+}
+
+function changeIframeSrc_tryhackme(event) {
+  event.preventDefault(); // empêche le comportement par défaut de la balise a
+    $("#window").css("display", "block");
+  var iframe = document.getElementById('content');
+  iframe.src = "https://tryhackme.com/p/Caltus124";
+}
+
+function changeIframeSrc_bing(event) {
+  event.preventDefault(); // empêche le comportement par défaut de la balise a
+    $("#window").css("display", "block");
+  var iframe = document.getElementById('content');
+  iframe.src = "https://www.bing.com/?cc=fr";
+}
+
+function changeIframeSrc_netfliz(event) {
+  event.preventDefault(); // empêche le comportement par défaut de la balise a
+    $("#window").css("display", "block");
+  var iframe = document.getElementById('content');
+  iframe.src = "http://127.0.0.1/Netfliz/";
+}
+
+function changeIframeSrc_cv(event) {
+  event.preventDefault(); // empêche le comportement par défaut de la balise a
+    $("#window").css("display", "block");
+  var iframe = document.getElementById('content');
+  iframe.src = "{{ asset('pdf/fontana_enzo_cv.pdf') }}";
+}
+
+function changeIframeSrc_osint_avion(event) {
+  event.preventDefault(); // empêche le comportement par défaut de la balise a
+    $("#window").css("display", "block");
+  var iframe = document.getElementById('content');
+  iframe.src = "{{ asset('pdf/WRITE-UP AVION.pdf') }}";
+}
+
+function changeIframeSrc_osint_tgv(event) {
+  event.preventDefault(); // empêche le comportement par défaut de la balise a
+    $("#window").css("display", "block");
+  var iframe = document.getElementById('content');
+  iframe.src = "{{ asset('pdf/WRITE-UP OSINT.pdf') }}";
+
+}
+
+
+
+
+
 
 
 </script>
