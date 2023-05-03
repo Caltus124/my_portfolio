@@ -16,7 +16,7 @@
       <li><a onclick="changeIframeSrc_terminal(event)"><img src="{{ asset('images/terminal_ubuntu.png') }}" alt="terminal" width="90%"></a></li>
       <li><a onclick="changeIframeSrc_bing(event)"><img src="{{ asset('images/firefox_logo.png') }}" alt="firefox" width="80%"></a></li>
       <li><a onclick="changeIframeSrc_netfliz(event)"><img src="{{ asset('images/netfliz.png') }}" alt="files" width="90%"></a></li>
-      <li><a onclick="changeIframeSrc_word(event)"><img src="{{ asset('images/libre_office.png') }}" alt="office" width="80%"></a></li>
+      <li><a ><img src="{{ asset('images/files.png') }}" alt="office" width="80%"></a></li>
       <li><a onclick="changeIframeSrc_tryhackme(event)"><img src="{{ asset('images/tryhackme.png') }}" alt="tryhackme" width="90%"></a></li>
       <li><a href="https://www.linkedin.com/in/enzo-fontana-epsi/" target="_blank"><img src="{{ asset('images/linkedin.png') }}" alt="linkedin" width="80%"></a></li>
       <li><a onclick="toggleFullScreen(); return false;"><img src="{{ asset('images/zoom.png') }}" alt="zoom" width="80%"></a></li>
@@ -33,12 +33,12 @@
     <p>osint_tgv.txt</p>
   </div>
   <div class="desktop_app_col2">
-    <a onclick="changeIframeSrc_cv(event)"><img src="{{ asset('images/file.png') }}" alt="office" width="70px"></a>
-    <p>soon.txt</p>
-    <a onclick="changeIframeSrc_osint_avion(event)"><img src="{{ asset('images/file.png') }}" alt="office" width="70px"></a>
-    <p>soon.txt</p>
-    <a onclick="changeIframeSrc_osint_tgv(event)"><img src="{{ asset('images/file.png') }}" alt="office" width="70px"></a>
-    <p>soon.txt</p>
+    <a onclick="afficherPopup()"><img src="{{ asset('images/folder.png') }}" alt="office" width="70px"></a>
+    <p>photos</p>
+    <a onclick="changeIframeSrc_word(event)"><img src="{{ asset('images/libre_office.png') }}" alt="office" width="60px"></a>
+    <p>enzo_fontana.txt</p>
+    <a onclick="changeIframeSrc_sublimtext(event)"><img src="{{ asset('images/sublimtext.png') }}" alt="office" width="70px"></a>
+    <p>sublimtext</p>
   </div>
 </div>
 <div id="window">
@@ -248,12 +248,15 @@ body {
   border: 1px solid #1dad2b;
 }
 
+
+
 </style>
 <script>
 var titleBar = document.getElementById("title-bar");
 var exit = document.getElementById("exit");
 var max = document.getElementById("maximize");
 var min = document.getElementById("minimize");
+var logoDescription = document.getElementById("logo-description");
 
 titleBar.addEventListener('mouseover', function handleMouseOver() {
   titleBar.style.cursor = 'context-menu';
@@ -324,6 +327,7 @@ function toggleFullScreen() {
 function changeIframeSrc_word(event) {
   event.preventDefault(); // empêche le comportement par défaut de la balise a
   $("#window").css("display", "block");
+  logoDescription.innerHTML = "enzo_fontana.txt";
   var iframe = document.getElementById('content');
   iframe.src = "{{ path('app_word') }}";
 }
@@ -331,6 +335,7 @@ function changeIframeSrc_word(event) {
 function changeIframeSrc_terminal(event) {
   event.preventDefault(); // empêche le comportement par défaut de la balise a
     $("#window").css("display", "block");
+  logoDescription.innerHTML = "user@enzofontana.fr";
   var iframe = document.getElementById('content');
   iframe.src = "{{ path('app_terminal') }}";
 }
@@ -338,6 +343,7 @@ function changeIframeSrc_terminal(event) {
 function changeIframeSrc_tryhackme(event) {
   event.preventDefault(); // empêche le comportement par défaut de la balise a
     $("#window").css("display", "block");
+  logoDescription.innerHTML = "TryHackMe";
   var iframe = document.getElementById('content');
   iframe.src = "https://tryhackme.com/p/Caltus124";
 }
@@ -345,6 +351,7 @@ function changeIframeSrc_tryhackme(event) {
 function changeIframeSrc_bing(event) {
   event.preventDefault(); // empêche le comportement par défaut de la balise a
     $("#window").css("display", "block");
+  logoDescription.innerHTML = "Bing";
   var iframe = document.getElementById('content');
   iframe.src = "https://www.bing.com/?cc=fr";
 }
@@ -352,6 +359,7 @@ function changeIframeSrc_bing(event) {
 function changeIframeSrc_netfliz(event) {
   event.preventDefault(); // empêche le comportement par défaut de la balise a
     $("#window").css("display", "block");
+  logoDescription.innerHTML = "Netfliz";
   var iframe = document.getElementById('content');
   iframe.src = "http://127.0.0.1/Netfliz/";
 }
@@ -359,6 +367,7 @@ function changeIframeSrc_netfliz(event) {
 function changeIframeSrc_cv(event) {
   event.preventDefault(); // empêche le comportement par défaut de la balise a
     $("#window").css("display", "block");
+  logoDescription.innerHTML = "enzo_fontana_cv.pdf";
   var iframe = document.getElementById('content');
   iframe.src = "{{ asset('pdf/fontana_enzo_cv.pdf') }}";
 }
@@ -366,6 +375,7 @@ function changeIframeSrc_cv(event) {
 function changeIframeSrc_osint_avion(event) {
   event.preventDefault(); // empêche le comportement par défaut de la balise a
     $("#window").css("display", "block");
+  logoDescription.innerHTML = "osint_avion.pdf";
   var iframe = document.getElementById('content');
   iframe.src = "{{ asset('pdf/WRITE-UP AVION.pdf') }}";
 }
@@ -373,16 +383,41 @@ function changeIframeSrc_osint_avion(event) {
 function changeIframeSrc_osint_tgv(event) {
   event.preventDefault(); // empêche le comportement par défaut de la balise a
     $("#window").css("display", "block");
+  logoDescription.innerHTML = "osint_tgv.pdf";
   var iframe = document.getElementById('content');
   iframe.src = "{{ asset('pdf/WRITE-UP OSINT.pdf') }}";
 
 }
 
+function changeIframeSrc_sublimtext(event) {
+  event.preventDefault(); // empêche le comportement par défaut de la balise a
+    $("#window").css("display", "block");
+  logoDescription.innerHTML = "Sublimtext";
+  var iframe = document.getElementById('content');
+  iframe.src = "{{ path('app_sublimtext') }}";
+}
 
 
+function afficherPopup() {
+  // Création de la popup
+  var popup = window.open("", "popup", "width=700,height=400");
 
+  // Ajout des images dans la popup
+  popup.document.write('<img width="100%" src="{{ asset('images/ubuntu.jpg') }}" onclick="window.opener.changerBackground(\'{{ asset('images/ubuntu.jpg') }}\')">');
+  popup.document.write('<img width="100%" src="{{ asset('images/ubuntu1.jpg') }}" onclick="window.opener.changerBackground(\'{{ asset('images/ubuntu1.jpg') }}\')">');
+  popup.document.write('<img width="100%" src="{{ asset('images/ubuntu2.jpg') }}" onclick="window.opener.changerBackground(\'{{ asset('images/ubuntu2.jpg') }}\')">');
+  popup.document.write('<img width="100%" src="{{ asset('images/ubuntu4.png') }}" onclick="window.opener.changerBackground(\'{{ asset('images/ubuntu4.png') }}\')">');
+  popup.document.write('<img width="100%" src="{{ asset('images/ubuntu3.jpg') }}" onclick="window.opener.changerBackground(\'{{ asset('images/ubuntu3.jpg') }}\')">');
+  popup.document.write('<img width="100%" src="{{ asset('images/ubuntu5.jpg') }}" onclick="window.opener.changerBackground(\'{{ asset('images/ubuntu5.jpg') }}\')">');
 
+  // Ajout de la classe "popup" à la popup
+  popup.document.body.classList.add("popup");
+}
 
+function changerBackground(image) {
+  // Changement du background de la page
+  document.body.style.backgroundImage = "url('" + image + "')";
+}
 
 </script>
 </html>
