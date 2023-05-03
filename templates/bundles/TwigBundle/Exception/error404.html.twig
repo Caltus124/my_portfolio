@@ -1,1 +1,66 @@
-<h1>error404<h1>
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<html>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a onclick="changeIframeSrc_terminal(event)"><img src="{{ asset('images/terminal_ubuntu.png') }}" alt="terminal" width="90%"></a></li>
+      <li><a onclick="changeIframeSrc_bing(event)"><img src="{{ asset('images/firefox_logo.png') }}" alt="firefox" width="80%"></a></li>
+      <li><a onclick="changeIframeSrc_netfliz(event)"><img src="{{ asset('images/netfliz.png') }}" alt="files" width="90%"></a></li>
+      <li><a ><img src="{{ asset('images/files.png') }}" alt="office" width="80%"></a></li>
+      <li><a onclick="changeIframeSrc_tryhackme(event)"><img src="{{ asset('images/tryhackme.png') }}" alt="tryhackme" width="90%"></a></li>
+      <li><a href="https://www.linkedin.com/in/enzo-fontana-epsi/" target="_blank"><img src="{{ asset('images/linkedin.png') }}" alt="linkedin" width="80%"></a></li>
+      <li><a onclick="toggleFullScreen(); return false;"><img src="{{ asset('images/zoom.png') }}" alt="zoom" width="80%"></a></li>
+    </ul>
+  </nav>
+</header>
+<div class="desktop_app">
+  <div class="desktop_app_col1">
+    <a onclick="changeIframeSrc_cv(event)"><img src="{{ asset('images/pdf.png') }}" alt="office" width="70px"></a>
+    <p>enzo_fontana_cv.pdf</p>
+    <a onclick="changeIframeSrc_osint_avion(event)"><img src="{{ asset('images/pdf.png') }}" alt="office" width="70px"></a>
+    <p>osint_avion.txt</p>
+    <a onclick="changeIframeSrc_osint_tgv(event)"><img src="{{ asset('images/pdf.png') }}" alt="office" width="70px"></a>
+    <p>osint_tgv.txt</p>
+  </div>
+  <div class="desktop_app_col2">
+    <a onclick="afficherPopup()"><img src="{{ asset('images/folder.png') }}" alt="office" width="70px"></a>
+    <p>photos</p>
+    <a onclick="changeIframeSrc_word(event)"><img src="{{ asset('images/libre_office.png') }}" alt="office" width="60px"></a>
+    <p>enzo_fontana.txt</p>
+    <a onclick="changeIframeSrc_sublimtext(event)"><img src="{{ asset('images/sublimtext.png') }}" alt="office" width="70px"></a>
+    <p>sublimtext</p>
+  </div>
+</div>
+<div id="window">
+<!-- Title bar start -->
+
+<div id="title-bar-width">
+	<div id="title-bar" class="outer yosemite">
+		<span class="dots">
+	     <div id="exit" class="dot red"></div>
+	     <div id="minimize" class="dot amber"></div>
+	     <div id="maximize" class="dot green"></div>
+	    </span>
+
+	     <span id="logo-description">user@enzofontana.fr</span>
+	</div>
+</div>
+
+<iframe id="content" src="{{ path('app_terminal') }}" frameBorder="0"></iframe>
+
+</div>
+</body>
+
+<link href="{{ asset('css/home.css') }}" rel="stylesheet" />
+<script src="{{ asset('js/index.js') }}"></script>
+
+
+</html>
+{% endblock %}
+
