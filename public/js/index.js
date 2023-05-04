@@ -143,6 +143,14 @@ function changeIframeSrc_sublimtext(event) {
   iframe.src = "/sublimtext";
 }
 
+function changeIframeSrc_projets(event) {
+    event.preventDefault(); // empêche le comportement par défaut de la balise a
+      $("#window").css("display", "block");
+    logoDescription.innerHTML = "Mes projets";
+    var iframe = document.getElementById('content');
+    iframe.src = "/projets";
+  }
+
 
 function afficherPopup() {
   // Création de la popup

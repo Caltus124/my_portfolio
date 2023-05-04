@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+<div id="maincontainer">    
+    <section id="projets">
+        <div class="proj1">
+            <h2>MES PROJETS</h2>
+        </div>
+        <article class="proj2">       
+            <div class="proj2">
+                <div class="container">
+                    <div class="img-projets">                      
+                        <a href="/netfliz"><img src="../images/netfliz.png"></a>
+                        <div class="text-proj">                        
+                        <h2>NETFLIZ</h2>  
+                        <p>Une application vulnérable</p>
+                        <div class="icon-eye">                           
+                            <i class=" fa fa-eye"></i>                           
+                        </div>
+                        </div>                         
+                        </div>
+                    <div class="img-projets">
+                        <a href=" "><img src="../images/epsipong.png"></a><div class="text-proj">
+                        <h2>EPSI PONG</h2>  
+                        <p>Le meilleur jeu de pong</p>
+                        <div class="icon-eye">
+                            <i class=" fa fa-eye"></i>
+                        </div>
+                        </div> 
+                    </div>
+                </div> 
+                <div class="container">
+                    <div class="img-projets">                        
+                        <a href=" "><img src="../images/rubber.png"></a>
+                        <div class="text-proj">                        
+                        <h2>RubberPICO</h2>  
+                        <p>Une clé USB dangereuse</p>
+                        <div class="icon-eye">                           
+                            <i class=" fa fa-eye"></i>                           
+                        </div>
+                        </div>                         
+                        </div>
+                    <div class="img-projets">
+                    <a href=" "><img src="../images/ikea.png"></a><div class="text-proj">
+                        <h2>IKEA</h2>  
+                        <p>Une nouvelle base de donnée</p>
+                        <div class="icon-eye">
+                            <i class=" fa fa-eye"></i>
+                        </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="img-projets">                        
+                        <a href=" "><img src="../images/django.png"></a>
+                        <div class="text-proj">                        
+                        <h2>DJANGO APP</h2>
+                        <p>Un admin panel de qualité</p>
+                        <div class="icon-eye">                           
+                            <i class=" fa fa-eye"></i>                           
+                        </div>
+                        </div>                         
+                        </div>
+                    <div class="img-projets">
+                    <a href=" "><img src="../images/evilbt.png"></a><div class="text-proj">
+                        <h2>EVIL-BT</h2>  
+                        <p>Une app pour DDOS des bluetooth</p>
+                        <div class="icon-eye">
+                            <i class=" fa fa-eye"></i>
+                        </div>
+                        </div> 
+                    </div>
+                </div><br><br><br><br>                  
+            </div>
+        </article>         
+    </section>           
+</div>
+<link href="{{ asset('css/projets.css') }}" rel="stylesheet" />
+{% endblock %}

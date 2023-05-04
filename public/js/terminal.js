@@ -10,7 +10,7 @@ var commandes = "experience" + "<br>" + "tryhackme" + "<br>" + "about" + "<br>" 
 
 var ls = "<span class='bleu_name'>" + "photos" + "</span>" +  "<br>" + "enzo_fontana_cv.pdf" +  "<br>" + "osint_avion.pdf" + "<br>" + "osint_tgv.pdf" + "<br>"; 
 
-var cv = "Cliquer sur le lien pour télécharger mon cv : " + '<a href="{{ asset(\'pdf/fontana_enzo_cv.pdf\') }}" title=\'pdf\'>' + "<span class='bleu_name'>" + "mon cv" + "</span>" + "</a>";
+var cv = "Cliquer sur le lien pour télécharger mon cv : " + '<a href="../pdf/fontana_enzo_cv.pdf" title=\'pdf\'>' + "<span class='bleu_name'>" + "mon cv" + "</span>" + "</a>";
 
 var osint = "L'OSINT, est tout simplement l'exploitation de sources d'information accessibles par tout le monde (journaux, sites web, conférences…) a des fins de renseignement.";
 
@@ -92,12 +92,12 @@ window.addEventListener('click',function(){
 })
 
 function cat(){
-    var images = ["{{ asset('images/cat.jpg') }}", "{{ asset('images/cat1.jpeg') }}", "{{ asset('images/cat2.jpg') }}", "{{ asset('images/img3.jpeg') }}", "{{ asset('images/img4.jpg') }}", "{{ asset('images/img5.jpg') }}", "{{ asset('images/img6.jpeg') }}", "{{ asset('images/img6.jpeg') }}"];
+    var images = ["../images/cat.jpg", "../images/cat1.jpeg", "../images/cat2.jpg", "../images/cat3.jpeg", "../images/cat4.jpg", "../images/cat5.jpg", "../images/cat6.jpeg", "../images/cat6.jpeg"];
 
     var rdm = Math.floor(Math.random() * images.length);
     var img = "<img src='" + images[rdm] + "' height='300px'>";
 
-    return '<img src="{{ asset(\'images/anssi.png\') }}" height=\'300px\'>';
+    return img;
 }
 
 
@@ -116,7 +116,7 @@ inputField.addEventListener("keypress", function(event) {
         } else if (inputValue === "osint") {
             result.innerHTML = name_cli + osint + "<br><br>";
         } else if (inputValue === "cv") {
-            result.innerHTML = name_cli + '<a href="{{ asset(\'pdf/fontana_enzo_cv.pdf\') }}" title=\'pdf\'>CV</a>' + "<br><br>";
+            result.innerHTML = name_cli + cv + "<br><br>";
         }else if (inputValue === "poste") {
             result.innerHTML = name_cli + poste_linkedin + "<br><br>";
         }else if (inputValue === "contact") {
