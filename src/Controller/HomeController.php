@@ -15,4 +15,12 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    #[Route('/rdp', name: 'app_rdp')]
+    public function index_rdp(): Response
+    {
+        return $this->render('home/rdp.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }

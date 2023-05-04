@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="rdp_box">
+    <div class="rdp_box_header">
+        <img src="{{ asset('images/rdp.png') }}">
+        <h1>Remote Desktop Connection</h1>
+    </div>
+    <div class="rdp_box_content">
+        <div class="rdp_box_content_logo">
+            <img src="{{ asset('images/rpd.png') }}">
+            <h1>Remote Desktop Connection</h1>    
+        </div>
+        <div class="rdp_box_content_info"></div>
+    </div>
+</div>
+
+<style>
+body{
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Segoe UI;
+}
+.rdp_box{
+    width: 50%;
+    height: 50vh;
+    background-color: #0079D6;
+}
+.rdp_box_header{
+    width: 100%;
+    height: 15%;
+    background-color: #0079D6;
+    display: flex;
+    align-items: center;
+}
+.rdp_box_header h1{
+    font-size: 1.2em;
+    color: white; 
+}
+img{
+    width: 40px;
+    margin: 5px;
+}
+.rdp_box_content{
+    background-color: white;
+    width: 99%;
+    height: 84%;
+    margin-left: 0.5%;
+}
+.rdp_box_content_logo{
+    border: 1px solid red;
+    width: 100%;
+    height: 30%;
+}
+
+.rdp_box_content_info{
+    border: 1px solid green;
+    width: 100%;
+    height: 70%;
+}
+</style>
