@@ -143,7 +143,7 @@ function changeIframeSrc_sublimtext(event) {
   iframe.src = "/sublimtext";
 }
 
-function changeIframeSrc_projets(event) {
+function changeIframeSrc_projet(event) {
     event.preventDefault(); // empêche le comportement par défaut de la balise a
       $("#window").css("display", "block");
     logoDescription.innerHTML = "Mes projets";
