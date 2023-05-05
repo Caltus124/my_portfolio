@@ -9,27 +9,48 @@
         "url" : "",
         "langage" : [
             {
-            "nom_langage" : "php",
-            "image_langage" : "logo_php.png"
+                "nom_langage" : "php",
+                "image_langage" : "../images/logo_php.png"
             },
             {
                 "nom_langage" : "html",
-                "image_langage" : "logo_html.png"
+                "image_langage" : "../images/logo_html.png"
             },
             {
                 "nom_langage" : "css",
-                "image_langage" : "logo_css.png"
+                "image_langage" : "../images/logo_css.png"
             },
             {
                 "nom_langage" : "js",
-                "image_langage" : "logo_js.png"
+                "image_langage" : "../images/logo_js.png"
             },
             {
                 "nom_langage" : "MySQL",
-                "image_langage" : "logo_mysql.png"
+                "image_langage" : "../images/logo_mysql.png"
             }
         ],
         "image":[
+            {
+                "image" : "../images/netfliz.png"
+            },
+            {
+                "image" : "../images/netfliz.png"
+            },
+            {
+                "image" : "../images/netfliz.png"
+            },
+            {
+                "image" : "../images/netfliz.png"
+            },
+            {
+                "image" : "../images/netfliz.png"
+            },
+            {
+                "image" : "../images/netfliz.png"
+            },
+            {
+                "image" : "../images/netfliz.png"
+            },
             {
                 "image" : "../images/netfliz.png"
             }

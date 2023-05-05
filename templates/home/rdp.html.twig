@@ -2,24 +2,49 @@
 <div class="rdp_box">
     <div class="rdp_box_header">
         <img src="{{ asset('images/rdp.png') }}">
-        <h1>Remote Desktop Connection</h1>
+        <h1>Connexion Bureau à distance</h1>
     </div>
     <div class="rdp_box_content">
         <div class="rdp_box_content_logo">
-            <img src="{{ asset('images/rpd.png') }}">
-            <h1>Remote Desktop Connection</h1>    
+            <div class="rdp_box_content_logo_img">
+            </div>
+            <div class="rdp_box_content_logo_txt">
+                <p>Connexion Bureau<br><strong>A distance</strong></p>
+            </div>       
         </div>
-        <div class="rdp_box_content_info"></div>
+        <div class="rdp_box_content_info">
+            <form method="post" action="" enctype="multipart/form-data">
+                <label for="ip" class="ip">Ordinateur :</label>
+                <select id="ip">
+                    <option value="ip1" selected>172.0.0.10</option>
+                </select><br>
+                <label for="name" class="nom">Nom <br>d'utilisateur :</label>
+                <input type="text" id="name" name="name" required value="SRV-ENZO\Administrateur"><br>
+            </form>
+        </div>
+        <div class="rdp_box_content_btn">
+            <div>
+                <h1>Afficher les options</h1>
+            </div>
+            <div>
+                <a href="/home">Connexion</a>
+                <a href="https://learn.microsoft.com/fr-fr/windows-server/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting">Aide</a>
+            </div>
+        </div>
     </div>
 </div>
 
 <style>
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
-    background-color: grey;
+    background-color: #222222;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Segoe UI;
+    font-family: arial;
 }
 .rdp_box{
     width: 50%;
@@ -48,14 +73,77 @@ img{
     margin-left: 0.5%;
 }
 .rdp_box_content_logo{
-    border: 1px solid red;
     width: 100%;
     height: 30%;
+    display: flex;
 }
 
 .rdp_box_content_info{
-    border: 1px solid green;
     width: 100%;
-    height: 70%;
+    height: 50%;
+    background-color: #F0F0F0;
+    border-top: 5px solid #D2D2D2;
+}
+.rdp_box_content_logo_img{
+    width: 15%;
+    background-image: url("{{ asset('images/rpd.png') }}");
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+.rdp_box_content_logo_txt{
+    display: flex;
+    align-items: center;
+}
+p{
+    color: #003297;
+    font-size: 2em;
+    line-height: 1em;
+
+}
+form{ 
+    margin: 2%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+select, input{
+    width: 50%;
+    font-size: 1.5em;
+}
+input{
+    border: none;
+    background-color: #F0F0F0;
+}
+.ip{
+    font-size: 1.5em;
+    margin-right: 5%;
+}
+.nom{
+    font-size: 1.5em;
+    margin-right: 3.8%;
+}
+.rdp_box_content_btn{
+    width: 100%;
+    height: 20%;
+    background-color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.rdp_box_content_btn h1{
+    font-size: 1.5em;
+}
+a{
+    text-decoration: none;
+    border: 1px solid #C8C8C8;
+    background-color: #E1E1E1;
+    padding: 5px 20px;
+    margin-right: 5px; 
+}
+a:hover{
+    border: 2px solid #006FD5;
 }
 </style>
