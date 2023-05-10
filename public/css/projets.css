@@ -26,10 +26,7 @@ body{
 #maincontainer{
     display: flex;
     flex-direction: column;
-    width:100%
-}
-{
-    text-decoration: none;
+    width:100%;
 }
 .container{
     display: flex;

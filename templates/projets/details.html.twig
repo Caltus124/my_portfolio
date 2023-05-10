@@ -13,7 +13,7 @@
     <div class="langage">
     {% for langage in data.langage %}
         <div class="langage_box">
-            <img src="{{ langage.image_langage }}" width="15%"/>
+            <img src="{{ langage.image_langage }}" width="15%" alt="{{ langage.nom_langage }}"/>
         </div>
     {% endfor %}
     </div>
@@ -21,7 +21,10 @@
         <p>{{ data.description }}</p> 
     </div>
 </div>
-
+<div class="lien">
+<a href="{{ data.url }}">{{ data.url }}</a><br>
+<a href="{{ data.github }}">{{ data.github }}</a>
+</div>
 </section>
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -112,13 +115,10 @@ header{
     padding: 10px;
 }
 
-
-
-
-
-
-
-
+.lien{
+    text-align: center;
+    margin-top: 20px;
+}
 
 
 </style>

@@ -3,10 +3,9 @@
     {   
         "id": 1,
         "title" : "NETFLIZ",
-        "date" : "Janvier 2023",
-        "description" : "NETFLIZ est une VM vulnérable qui j'ai créer pour simuler des cyber attaque. L'objectif de cette VM, est de s'améliorer en test d'intrusion, nous pouvons retrouver plusieurs vulnérabilité connue comme des injections SQL",
+        "description" : "NETFLIZ est une machine virtuelle (VM) vulnérable que j'ai créée pour permettre aux utilisateurs de simuler des cyberattaques. L'objectif de cette VM est de leur permettre de s'exercer aux tests d'intrusion et d'améliorer leurs compétences. Elle comprend plusieurs vulnérabilités connues, telles que les injections SQL et l'upload de fichier malvaillant, afin de fournir un environnement réaliste pour l'apprentissage et la pratique de la sécurité informatique.",
         "github" : "",
-        "url" : "",
+        "url" : "https://tryhackme.com/jr/netfliz",
         "langage" : [
             {
                 "nom_langage" : "php",
@@ -31,140 +30,152 @@
         ],
         "image":[
             {
-                "image" : "../images/netfliz.png"
+                "image" : "../images/netfliz/netfliz.png"
             },
             {
-                "image" : "../images/netfliz.png"
+                "image" : "../images/netfliz/netfliz2.png"
             },
             {
-                "image" : "../images/netfliz.png"
+                "image" : "../images/netfliz/netfliz3.png"
             },
             {
-                "image" : "../images/netfliz.png"
+                "image" : "../images/netfliz/netfliz4.png"
             },
             {
-                "image" : "../images/netfliz.png"
+                "image" : "../images/netfliz/netfliz6.png"
             },
             {
-                "image" : "../images/netfliz.png"
-            },
-            {
-                "image" : "../images/netfliz.png"
-            },
-            {
-                "image" : "../images/netfliz.png"
+                "image" : "../images/netfliz/netfliz7.png"
             }
         ]
     },
     {   
         "id": 2,
         "title" : "EPSI PONG",
-        "date" : "Janvier 2023",
-        "description" : "",
-        "github" : "",
+        "description" : "EPSI PONG est mon tout premier jeu que j'ai créé. Il s'agit d'une adaptation moderne du célèbre jeu PONG, qui a marqué l'histoire du jeu vidéo. Inspiré par ce classique intemporel, j'ai ajouté des fonctionnalités supplémentaires pour rendre l'expérience encore plus captivante.\n\nDans EPSI PONG, vous retrouverez l'essence du jeu original : deux raquettes se déplaçant verticalement sur les côtés de l'écran et un petit ballon rebondissant entre elles. Cependant, j'ai intégré des éléments supplémentaires pour pimenter le gameplay. Vous découvrirez des bonus qui vous donneront des avantages temporaires, tels que des raquettes plus larges ou même des capacités spéciales. \n\nMais attention, il y a aussi des malus qui compliqueront votre progression ! Ils peuvent réduire la taille de votre raquette, ralentir la vitesse de déplacement ou rendre la balle plus difficile à contrôler. Vous pourrez ressentir toute l'excitation du jeu directement entre vos mains.",
+        "github" : "https://github.com/Caltus124/epsipong",
         "url" : "",
         "langage" : [
             {
-            "nom_langage" : "php",
-            "image_langage" : "logo_php.png"
-            },
-            {
                 "nom_langage" : "html",
-                "image_langage" : "logo_html.png"
+                "image_langage" : "../images/logo_html.png"
             },
             {
                 "nom_langage" : "css",
-                "image_langage" : "logo_css.png"
+                "image_langage" : "../images/logo_css.png"
             },
             {
                 "nom_langage" : "js",
-                "image_langage" : "logo_js.png"
-            },
-            {
-                "nom_langage" : "MySQL",
-                "image_langage" : "logo_mysql.png"
+                "image_langage" : "../images/logo_js.png"
             }
         ],
         "image":[
             {
-                "image" : "../images/netfliz.png"
+                "image" : "../images/epsipong/epsipong.png"
+            },
+            {
+                "image" : "../images/epsipong/epsipong2.png"
+            },
+            {
+                "image" : "../images/epsipong/epsipong3.png"
+            },
+            {
+                "image" : "../images/epsipong/epsipong4.png"
             }
         ]
     },
     {   
         "id": 3,
-        "title" : "RubberPICO",
-        "date" : "Janvier 2023",
+        "title" : "My Portfolio",
         "description" : "",
         "github" : "",
         "url" : "",
         "langage" : [
             {
             "nom_langage" : "php",
-            "image_langage" : "logo_php.png"
-            },
-            {
-                "nom_langage" : "html",
-                "image_langage" : "logo_html.png"
-            },
-            {
-                "nom_langage" : "css",
-                "image_langage" : "logo_css.png"
+            "image_langage" : "../images/logo_powershell.png"
             },
             {
                 "nom_langage" : "js",
-                "image_langage" : "logo_js.png"
+                "image_langage" : "../images/logo_js.png"
             },
             {
-                "nom_langage" : "MySQL",
-                "image_langage" : "logo_mysql.png"
+                "nom_langage" : "html",
+                "image_langage" : "../images/logo_html.png"
+            },
+            {
+                "nom_langage" : "css",
+                "image_langage" : "../images/logo_css.png"
+            },
+            {
+                "nom_langage" : "symfony",
+                "image_langage" : "../images/logo_symfony.png"
+            },
+            {
+                "nom_langage" : "twing",
+                "image_langage" : "../images/twig.png"
             }
         ],
         "image":[
             {
-                "image" : "../images/netfliz.png"
+                "image" : "../images/portfolio/portfolio.png"
+            },
+            {
+                "image" : "../images/portfolio/portfolio1.png"
+            },
+            {
+                "image" : "../images/portfolio/portfolio2.png"
+            },
+            {
+                "image" : "../images/portfolio/portfolio4.png"
+            },
+            {
+                "image" : "../images/portfolio/portfolio5.png"
+            },
+            {
+                "image" : "../images/portfolio/portfolio6.png"
             }
         ]
     },
     {   
         "id": 4,
         "title" : "IKEA",
-        "date" : "Janvier 2023",
         "description" : "",
         "github" : "",
         "url" : "",
         "langage" : [
             {
-            "nom_langage" : "php",
-            "image_langage" : "logo_php.png"
-            },
-            {
-                "nom_langage" : "html",
-                "image_langage" : "logo_html.png"
-            },
-            {
-                "nom_langage" : "css",
-                "image_langage" : "logo_css.png"
-            },
-            {
-                "nom_langage" : "js",
-                "image_langage" : "logo_js.png"
-            },
-            {
-                "nom_langage" : "MySQL",
-                "image_langage" : "logo_mysql.png"
+                "nom_langage" : "SQLServer",
+                "image_langage" : "../images/logo_sqlserver.png"
             }
         ],
         "image":[
             {
-                "image" : "../images/netfliz.png"
+                "image" : "../images/ikea/ikea.png"
+            },
+            {
+                "image" : "../images/ikea/ikea2.png"
+            },
+            {
+                "image" : "../images/ikea/ikea3.png"
+            },
+            {
+                "image" : "../images/ikea/ikea4.png"
+            },
+            {
+                "image" : "../images/ikea/ikea5.png"
+            },
+            {
+                "image" : "../images/ikea/ikea7.png"
+            },
+            {
+                "image" : "../images/ikea/ikea8.png"
             }
         ]
     },
     {   
         "id": 5,
         "title" : "DJANGO APP",
-        "date" : "Janvier 2023",
         "description" : "",
         "github" : "",
         "url" : "",
@@ -199,7 +210,6 @@
     {   
         "id": 6,
         "title" : "EVIL-BT",
-        "date" : "Janvier 2023",
         "description" : "",
         "github" : "",
         "url" : "",
