@@ -87,8 +87,8 @@
     {   
         "id": 3,
         "title" : "My Portfolio",
-        "description" : "",
-        "github" : "",
+        "description" : "J'ai créé mon portfolio en utilisant le framework Symfony, qui m'a grandement au développement de ce dernier. Mon portfolio est conçu pour ressembler à une machine Linux (Ubuntu), offrant une expérience unique et immersive aux visiteurs. Lorsque vous accédez à mon portfolio, vous êtes accueilli par une interface qui évoque un environnement Linux. Vous pouvez voir un émulateur de terminal intégré à la page HTML, vous permettant de saisir des commandes, exactement comme si vous utilisiez un vrai terminal Linux. Ce terminal virtuel est interactif et réagit aux commandes que vous tapez. Vous pouvez naviguer dans différentes sections de mon portfolio, afficher des informations sur mes projets, compétences et expériences, et même interagir avec des fonctionnalités spéciales. En utilisant les commandes adaptées, vous pouvez parcourir mes projets, afficher des détails supplémentaires, télécharger des fichiers, ouvrir des liens externes, et bien plus encore. Cette approche interactive donne à mon portfolio une touche originale et engageante, tout en permettant aux visiteurs de découvrir mes réalisations de manière ludique et immersive. Grâce à l'utilisation du framework Symfony, j'ai pu développer cette fonctionnalité innovante et créer un portfolio qui sort de l'ordinaire. Cela m'a également offert la flexibilité nécessaire pour gérer facilement les données et les interactions entre le terminal et les pages HTML.",
+        "github" : "https://github.com/Caltus124/my_portfolio",
         "url" : "",
         "langage" : [
             {
@@ -140,7 +140,7 @@
     {   
         "id": 4,
         "title" : "IKEA",
-        "description" : "",
+        "description" : "Pour ce projet, je me suis inspiré du géant de la vente de meubles en kit, Ikea, afin de modéliser et implémenter une base de données relationnelle sous SQL Server. En m'appuyant sur le concept d'Ikea, j'ai conçu un schéma de base de données qui permet de gérer efficacement les informations relatives aux meubles, aux clients, aux commandes et aux stocks. La base de données est organisée de manière relationnelle, ce qui permet de représenter les relations et les dépendances entre les différentes entités de manière cohérente.",
         "github" : "",
         "url" : "",
         "langage" : [
@@ -176,69 +176,82 @@
     {   
         "id": 5,
         "title" : "DJANGO APP",
-        "description" : "",
-        "github" : "",
+        "description" : "Le projet DJANGO avait pour objectif de développer une application de gestion de profils d'étudiants ou d'utilisateurs en utilisant le framework Django. J'ai réussi à créer une application qui offre des fonctionnalités permettant d'ajouter, de modifier et de supprimer des élèves, tout en intégrant un système de classes et de niveaux. Grâce à l'application que j'ai développée, les utilisateurs peuvent facilement gérer les profils des élèves. Ils ont la possibilité d'ajouter de nouveaux élèves en saisissant leurs informations, telles que le nom, l'âge, les coordonnées, etc. De plus, l'application permet de modifier les informations existantes des élèves, au cas où des changements seraient nécessaires. Il est également possible de supprimer des élèves du système, en cas de désinscription ou de fin de parcours scolaire.",
+        "github" : "https://github.com/Caltus124/django_profil_app",
         "url" : "",
         "langage" : [
             {
             "nom_langage" : "php",
-            "image_langage" : "logo_php.png"
+            "image_langage" : "../images/logo_php.png"
             },
             {
                 "nom_langage" : "html",
-                "image_langage" : "logo_html.png"
+                "image_langage" : "../images/logo_html.png"
             },
             {
                 "nom_langage" : "css",
-                "image_langage" : "logo_css.png"
+                "image_langage" : "../images/logo_css.png"
             },
             {
                 "nom_langage" : "js",
-                "image_langage" : "logo_js.png"
+                "image_langage" : "../images/logo_js.png"
             },
             {
                 "nom_langage" : "MySQL",
-                "image_langage" : "logo_mysql.png"
+                "image_langage" : "../images/logo_mysql.png"
             }
         ],
         "image":[
             {
-                "image" : "../images/netfliz.png"
+                "image" : "../images/django/django.png"
+            },
+            {
+                "image" : "../images/django/django2.png"
+            },
+            {
+                "image" : "../images/django/django3.png"
+            },
+            {
+                "image" : "../images/django/django4.png"
             }
         ]
     },
     {   
         "id": 6,
         "title" : "EVIL-BT",
-        "description" : "",
-        "github" : "",
+        "description" : "EvilBT est une application de cyberattaque que j'ai créée en python pour DDOS des cartes Bluetooth. ATTENTION, La création d'une application de cyberattaque pour mener des attaques DDOS sur des appareils Bluetooth et une violation de la confidentialité et de la sécurité des autres. J'ai créer cette application pour m'entrainer !",
+        "github" : "https://github.com/Caltus124/evil-bt",
         "url" : "",
         "langage" : [
             {
-            "nom_langage" : "php",
-            "image_langage" : "logo_php.png"
+            "nom_langage" : "python",
+            "image_langage" : "../images/logo_python.png"
             },
             {
                 "nom_langage" : "html",
-                "image_langage" : "logo_html.png"
+                "image_langage" : "../images/logo_html.png"
             },
             {
                 "nom_langage" : "css",
-                "image_langage" : "logo_css.png"
-            },
-            {
-                "nom_langage" : "js",
-                "image_langage" : "logo_js.png"
-            },
-            {
-                "nom_langage" : "MySQL",
-                "image_langage" : "logo_mysql.png"
+                "image_langage" : "../images/logo_css.png"
             }
         ],
         "image":[
             {
-                "image" : "../images/netfliz.png"
+                "image" : "../images/evilbt/evilbt1.png"
+            },
+            {
+                "image" : "../images/evilbt/evilbt2.png"
+            },
+            {
+                "image" : "../images/evilbt/evilbt3.png"
+            },            {
+                "image" : "../images/evilbt/evilbt5.png"
+            },
+            {
+                "image" : "../images/evilbt/evilbt.png"
             }
+
         ]
     }
     ]
